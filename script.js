@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
             text: info,
             width: 256,
             height: 256,
-            colorDark: "#0072c6", // Couleur principale
+            colorDark: "#4B0082", // Updated to dark purple color
             colorLight: "#ffffff"
         });
     
