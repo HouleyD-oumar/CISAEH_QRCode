@@ -259,6 +259,12 @@ canvas {
     .qr-code {
         width: 100%;
     }
+    .logo-container {
+        flex-wrap: wrap;
+    }
+    .logo{
+        width: 80px;
+    }
 }
 
 /* Amélioration du contraste pour l'accessibilité */
