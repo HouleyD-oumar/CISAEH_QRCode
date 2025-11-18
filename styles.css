@@ -69,11 +69,7 @@ h2 {
 /* Amélioration pour le mode sombre */
 @media (prefers-color-scheme: dark) {
     .logo {
-        filter: brightness(0) invert(1) drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
-    }
-    
-    .logo:hover {
-        filter: brightness(0) invert(1) drop-shadow(0 0 4px rgba(255, 255, 255, 0.5));
+        filter: none;
     }
 }
 

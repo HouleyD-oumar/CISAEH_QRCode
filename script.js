@@ -9,6 +9,24 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('qr-form');
     const loadingIndicator = document.getElementById('loading');
     const successMessage = document.getElementById('success-message');
+    const logoImage = document.getElementById('logo-image');
+    
+    // Fonction pour mettre à jour le logo en fonction du thème
+    function updateLogoForTheme() {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // Mode sombre - utiliser le logo alternatif
+            logoImage.src = 'images/logo_du_CISAEH.png';
+        } else {
+            // Mode clair - utiliser le logo par défaut
+            logoImage.src = 'images/logo_CISAEH_transparent.png.png';
+        }
+    }
+    
+    // Écouter les changements de thème
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(updateLogoForTheme);
+    
+    // Mettre à jour le logo au chargement
+    updateLogoForTheme();
     
     // Fonction pour générer un QR code
     function generateQRCode(person) {
