@@ -1,23 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="une application pour la generation de qr code distinée au carte ou badge du CISAEH">
+    <meta name="description" content="Générateur de QR Code pour le CISAEH. Créez facilement des QR codes personnalisés pour vos cartes, badges ou documents.">
+    <meta name="keywords" content="QR Code, CISAEH, générateur QR, code QR, création QR code, QR code personnalisé">
     <meta name="author" content="Oumar Guissé - 'The Big Tenor'">
-    <title>QR Code Generator</title>
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://votredomaine.com/">
+    <meta property="og:title" content="Générateur de QR Code CISAEH">
+    <meta property="og:description" content="Créez facilement des QR codes personnalisés pour le CISAEH">
+    <meta property="og:image" content="https://votredomaine.com/images/qr-code-og.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://votredomaine.com/">
+    <meta property="twitter:title" content="Générateur de QR Code CISAEH">
+    <meta property="twitter:description" content="Créez facilement des QR codes personnalisés pour le CISAEH">
+    <meta property="twitter:image" content="https://votredomaine.com/images/qr-code-og.jpg">
+
+    <title>Générateur de QR Code CISAEH - Créez vos propres QR codes</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="qrcode.js"></script>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://votredomaine.com/" />
+    <script defer src="qrcode.js"></script>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1>CISAEH QR Codes</h1>
+    <div class="container" role="main">
+        <header class="header" role="banner">
+            <h1>Générateur de QR Code CISAEH</h1>
+            <p class="subtitle">Créez facilement vos propres QR codes personnalisés</p>
         </header>
         
-        <div class="form-container">
-            <div class="success-message" id="success-message">QR Code généré avec succès!</div>
-            <form id="qr-form">
+        <section class="form-section" aria-labelledby="form-title">
+            <h2 id="form-title" class="visually-hidden">Formulaire de génération de QR Code</h2>
+            <div class="success-message" id="success-message" role="alert" aria-live="polite">QR Code généré avec succès!</div>
+            <form id="qr-form" aria-label="Formulaire de génération de QR Code">
                 <div class="form-group">
                     <label for="prenom">Prénom</label>
                     <input type="text" name="prenom" id="prenom" required>
@@ -57,8 +83,13 @@
             <p>Génération du QR code...</p>
         </div>
         
-        <div id="qr-codes-container"></div>
+<div id="qr-codes-container" role="region" aria-live="polite" aria-atomic="true"></div>
     </div>
+    
+    <footer class="footer" role="contentinfo">
+        <p>&copy; 2025 CISAEH - Tous droits réservés</p>
+        <p>Développé par Oumar Guissé - 'The Big Tenor'</p>
+    </footer>
 
    <!--  <script>
         document.addEventListener('DOMContentLoaded', function() {

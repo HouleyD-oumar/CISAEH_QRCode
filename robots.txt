@@ -1,0 +1,9 @@
+# Fichier robots.txt pour CISAEH QR Code Generator
+User-agent: *
+Allow: /
+
+# Désactiver l'indexation des dossiers inutiles
+Disallow: /images/
+
+# Plan du site (à activer après création)
+Sitemap: https://votredomaine.com/sitemap.xml

@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const logo = new Image();
             
             // Utiliser un chemin absolu pour le logo
-            const logoPath = './images/logo.png';
+            const logoPath = './images/logo_CISAEH_transparent.png.png';
             console.log('Tentative de chargement du logo depuis:', logoPath);
             
             // Gérer les erreurs de chargement du logo
